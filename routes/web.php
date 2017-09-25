@@ -29,4 +29,5 @@ Route::get('/getFreeMovies','DataController@getFreeMovies');
 Route::get('/getTopMovies','DataController@getTopMovies');
 Route::get('/getMovieDetail/{id}','DataController@getMovieDetail');
 Route::get('/getActorDetail/{id}','DataController@getActorDetail');
+Route::get('/searchResults/{type}/{query}','DataController@searchResults');
 Route::get('/getActivities/{start}','DataController@getActivities');

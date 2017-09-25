@@ -41,4 +41,24 @@ class DataController extends Controller
         $details = file_get_contents('https://api.douban.com/v2/movie/celebrity/'.$id);
         return $details;
     }
+
+    public function searchResults($type,$query)
+    {
+        switch ($type) {
+            case 'movies':
+                $movies = file_get_contents('https://api.douban.com/v2/movie/search?q='.$query.'&count=3');
+                return $movies;
+                break;
+            
+            case 'musics':
+                $musics = file_get_contents('https://api.douban.com/v2/music/search?q='.$query.'&count=3');
+                return $musics;
+                break;
+
+            case 'books':
+                $books = file_get_contents('https://api.douban.com/v2/book/search?q='.$query.'&count=3');
+                return $books;
+                break;
+        }
+    }
 }

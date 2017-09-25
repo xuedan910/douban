@@ -87,7 +87,7 @@
                 if(this.searchContent.trim().length == 0){
                     return false;
                 }
-                this.$router.push({path:'/home'});
+                this.$router.push('/searchresults/'+this.searchContent);
                 this.close();
             }
         }

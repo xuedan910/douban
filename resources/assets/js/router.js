@@ -6,6 +6,7 @@ import broadcasts from './components/Broadcasts.vue';
 import groups from './components/Groups.vue';
 import moviedetail from './components/MovieDetail.vue';
 import actordetail from './components/ActorDetail.vue';
+import searchresults from './components/SearchResults.vue';
 
 const routes = [
     {
@@ -37,6 +38,10 @@ const routes = [
     {
         path:'/groups',
         component:groups
+    },
+    {
+        path:'/searchresults/:tag',
+        component:searchresults
     },
 ];
 
